@@ -1,0 +1,21 @@
+<?php
+    $sequencia = [1,0,30,8,7,9,-1,-5];
+    $menor = [];
+
+    for($i=0;$i<count($sequencia);$i++)
+    {
+        for($j=0;$j<count($sequencia);$j++)
+        {
+            if($sequencia[$i]<=$sequencia[$j])
+            {
+                array_push($menor, $sequencia[$i]);
+            }    
+        }
+        
+        if(count($menor)==count($sequencia))
+        {
+            echo 'O menor é: '. $menor[0];
+        }
+        else{$menor=[];}
+    }
+?>
