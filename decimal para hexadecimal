@@ -1,0 +1,28 @@
+<?php
+
+$valor = 10000;
+$resto = 0;
+define('base', 16);
+$deslocar = [];
+echo 'O valor do número '.$valor.',';
+while ($valor > 1)
+{
+    $resto = $valor%base;
+    $valor = $valor/base;
+    if($resto < 10)
+    {   $deslocar [] = $resto;
+     
+    }else{
+        $hex = ['A','B','C','D','E','F'];
+        $deslocar [] = $hex[$resto - 10];
+    
+    }
+
+
+}
+echo '<br>';
+echo 'Em hexadecimal é: ';
+for($i=count($deslocar);$i>=0;$i--)
+{
+   echo $deslocar[$i];
+}
